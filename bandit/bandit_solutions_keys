@@ -1,0 +1,17 @@
+bandit 8 -> 9:
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+sort < data.txt | uniq -u
+
+bandit 9 -> 10:
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+tr -cd [:print:] < data.txt | cat -v |  grep "^[=]*"
+
+bandit 10 -> 11:
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+base64 --decode data.txt
+
+bandit 11 -> 12
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+tr 'N-ZA-Mn-za-m' 'A-Za-z' < data.txt
+
+
