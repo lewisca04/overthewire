@@ -59,4 +59,54 @@ IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 ssh -t bandit18@bandit.labs.overthewire.org /bin/sh
 
 bandit 19 -> 20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+./bandit20-do cat /etc/bandit_pass/bandit20
 
+bandit 20 -> 21
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+#open 2 terminals, ssh into both of them
+#terminal1:
+nc -l xxxxx
+#xxxxx is port of your choosing; I used 40424
+#terminal2:
+./suconnect 40424
+#terminal1:
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+#hit enter
+#the password will show up on terminal 1!
+#can also do (in terminal 1): nc -l xxxxx < /etc/bandit_pass/bandit20
+
+bandit 21 -> 22
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+cd /etc/cron.d
+cat cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+bandit 22 -> 23
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+cd /etc/cron.d
+cat cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+#!/bin/bash
+mytarget=$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)$
+cat $mytarget
+#copy the hash here
+cat /tmp/xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#where the x's are the hash.
+
+bandit 23 -> 24
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+really weird. IDK.
+
+bandit 24 -> 25
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+cd /tmp/bandit24
+python brute.py
+
+bandit 25 -> 26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+#resize the terminal window so that it's small
+ssh -i bandit26.sshkey bandit26@localhost
+#when more is available, type v, then type :r etc/bandit_pass/bandit26
+#vim will say read only, then hit enter and you will see the password.
