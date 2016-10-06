@@ -14,4 +14,49 @@ bandit 11 -> 12
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 tr 'N-ZA-Mn-za-m' 'A-Za-z' < data.txt
 
+bandit 12 -> 13
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+use x.xx to find out how it's compressed
+gzip -d x.gz (make sure to rename it with .gz extension by doing mv x.xx x.gz)
+bzip2 -d x
+tar -xvf x.bin
+
+bandit 13 -> 14
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+ssh -i sshkey.private bandit14@localhost
+
+bandit 14 -> 15
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+telnet localhost 30000
+
+bandit 15 -> 16
+cluFn7wTiGryunymYOu4RcffSxQluehd
+openssl s_client -quiet -connect localhost:30001
+
+bandit 16 -> 17
+nmap -p31000-32000 localhost
+#returns this list:
+PORT      STATE SERVICE
+31046/tcp open  unknown
+31518/tcp open  unknown
+31691/tcp open  unknown
+31790/tcp open  unknown
+31960/tcp open  unknown
+#end shown
+openssl s_client -connect localhost:31046
+#if it uses SSL, plug in password used to login to bandit16. If it returns same PW, it's not correct.
+#save the key in a file on your machine, and then do...
+ssh -i sshkey.private bandit17@bandit.labs.overthewire.org
+
+bandit 17 -> 18
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+diff passwords.old passwords.new
+#look at the one with the >, indicating it was a change added to .new from .old
+#using the password will tell you 'byebye' and kick you off. Related to 18 -> 19
+
+bandit 18 -> 19
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+ssh -t bandit18@bandit.labs.overthewire.org /bin/sh
+
+bandit 19 -> 20
 
