@@ -1,1 +1,15 @@
 leviathan 0 -> 1
+rioGegei8m
+ls -la
+#see the .backup
+cd .backup
+grep password bookmarks.html
+
+leviathan 1 -> 2
+ougahZi8Ta
+#see what running check does
+#then do...
+ltrace ./check
+#see the "sex"
+#run it with that password, get to terminal
+#cat /etc/leviathan_pass/leviathan2
